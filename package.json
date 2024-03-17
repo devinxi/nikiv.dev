@@ -4,7 +4,7 @@
     "dev": "vinxi dev",
     "start": "node ./.output/server/index.mjs",
     "start-vinxi": "vinxi start",
-    "build": "vinxi build --preset cloudflare-pages",
+    "build": "vinxi build",
     "db": "cd edgedb && bun --watch cli/cli.ts"
   },
   "type": "module",
