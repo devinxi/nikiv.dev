@@ -1,9 +1,0 @@
-name = "nikiv.dev"
-
-account_id = "e1a1737083ffd849ad2638b7e6069dec"
-compatibility_date = "2022-08-04"
-main = "./.output/server/index.mjs"
-compatibility_flags = [ "nodejs_compat" ]
-
-[site]
-bucket = ".output/public"
