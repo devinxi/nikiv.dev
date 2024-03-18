@@ -8,7 +8,7 @@ export default defineConfig({
   ssr: false,
   extensions: ["mdx", "md"],
   server: {
-    preset: "cloudflare_module",
+    preset: "cloudflare_pages",
     // enable CF Pages node compatiblity https://developers.cloudflare.com/workers/runtime-apis/nodejs/asynclocalstorage/
     rollupConfig: {
       external: ["__STATIC_CONTENT_MANIFEST", "node:async_hooks"],
