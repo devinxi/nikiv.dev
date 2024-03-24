@@ -25,5 +25,10 @@
   },
   "prettier": {
     "semi": false
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "vinxi@0.3.10": "patches/vinxi@0.3.10.patch"
+    }
   }
 }

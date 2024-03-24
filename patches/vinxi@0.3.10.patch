@@ -1,0 +1,47 @@
+diff --git a/lib/build.js b/lib/build.js
+index a61b73bc829f917fee4be5c1fc9e3c0636da11b2..1abba2f3e61218d73a9bbc7e6eb81971640befe6 100644
+--- a/lib/build.js
++++ b/lib/build.js
+@@ -1,29 +1,29 @@
+-import boxen from "boxen";
+-import { mkdir, rm, writeFile } from "fs/promises";
+-import { createRequire } from "module";
+-import { build, copyPublicAssets, createNitro, prerender } from "nitropack";
+-
+-import { writeFileSync } from "node:fs";
+-import { pathToFileURL } from "node:url";
+-
+ import { H3Event, createApp } from "../runtime/server.js";
+-import { chunksServerVirtualModule } from "./chunks.js";
+-import { createIncomingMessage, createServerResponse } from "./http-stream.js";
+-import invariant from "./invariant.js";
++import { build, copyPublicAssets, createNitro, prerender } from "nitropack";
+ import { c, consola, log, withLogger } from "./logger.js";
+-import { viteManifestPath } from "./manifest-path.js";
+-import { createSPAManifest } from "./manifest/spa-manifest.js";
++import { createIncomingMessage, createServerResponse } from "./http-stream.js";
+ import { handlerModule, join, relative, virtualId } from "./path.js";
++import { mkdir, rm, writeFile } from "fs/promises";
++
++import { chunksServerVirtualModule } from "./chunks.js";
+ import { config } from "./plugins/config.js";
++import { createRequire } from "module";
++import { createSPAManifest } from "./manifest/spa-manifest.js";
++import invariant from "./invariant.js";
+ import { manifest } from "./plugins/manifest.js";
++import { pathToFileURL } from "node:url";
+ import { routes } from "./plugins/routes.js";
+ import { treeShake } from "./plugins/tree-shake.js";
+ import { virtual } from "./plugins/virtual.js";
++import { viteManifestPath } from "./manifest-path.js";
++import { writeFileSync } from "node:fs";
+ 
+ /** @typedef {{}} BuildConfig */
+ 
+ const require = createRequire(import.meta.url);
+ 
++
++const boxen = (i) => i 
+ /**
+  *
+  * @param {import('./app.js').App} app
